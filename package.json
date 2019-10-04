@@ -1,0 +1,23 @@
+{
+  "name": "node_tutorials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "issue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziedtuihri/node_tutorials.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziedtuihri/node_tutorials/issues"
+  },
+  "homepage": "https://github.com/ziedtuihri/node_tutorials#readme",
+  "devDependencies": {
+    "webpack-cli": "3.3.9"
+  }
+}
