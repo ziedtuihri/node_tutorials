@@ -1,12 +1,21 @@
-const webpack = require("webpack");
-const path = require("path");
+let path = require('path');
 
-let config = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, './public'),
-        filename: './bundle.js'
-    }
+module.exports = {
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      exclude: /webpack-demo/,
+      loader: 'babel-loader',
+    }]
+  },
+
+  entry: './src/index.js',
+
+  output: {
+    filename: './bundle/bundle.js',
+    path: path.resolve(__dirname, './bundle')
+  },
+
+  mode: 'development'
 }
-
-module.exports = config;
