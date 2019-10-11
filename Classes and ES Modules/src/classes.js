@@ -1,5 +1,6 @@
 class Human {
     constructor() {
+      document.write('Human Constructor');
       console.log('Human Constructor');
   
       this.name = '';
@@ -14,6 +15,7 @@ class Human {
   export default class Person extends Human {
     constructor() {
       super();
+      document.write('Person Constructor');
       console.log('Person Constructor');
   
       this.name = 'John Doe';
