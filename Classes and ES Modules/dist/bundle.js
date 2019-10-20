@@ -91,6 +91,16 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
+// CONCATENATED MODULE: ./src/modules.js
+var userCard = {
+  name: 'Medhat Dawoud',
+  address: 'Amsterdam'
+};
+var address = userCard.address;
+function getUserName() {
+  return userCard.name;
+}
+/* harmony default export */ var modules = (userCard);
 // CONCATENATED MODULE: ./src/classes.js
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -182,34 +192,58 @@ function (_Human) {
 }(Human);
 
 
+
+var Point =
+/*#__PURE__*/
+function () {
+  function Point(x, y) {
+    _classCallCheck(this, Point);
+
+    this.x = x;
+    this.y = y;
+  }
+
+  _createClass(Point, null, [{
+    key: "distance",
+    value: function distance(a, b) {
+      dx = a.x - b.x;
+      dy = a.y - b.y;
+      return Math.hypot(dx, dy);
+    }
+  }]);
+
+  return Point;
+}();
 // CONCATENATED MODULE: ./src/index.js
 // named exports
 // import {getUserName, address} from './modules';
 // default exports
-// import user, {address,getUserName} from './modules';
-// all together
+ // all together
 // import * as all from './modules';
-// console.log(all.default);
-// --------------------------------
 
-var p = new Person(); // console.log(p.languages)
-// // ----------------------------------
+console.log("hello node", address, getUserName); // --------------------------------
+// import Person from './classes';
 
-p.setName = 'Medhat Dawoud';
-document.write('Name     =>', p.getName, '<br></br>');
-document.write('Job      =>', p.getJob());
-document.write('Age      =>', p.getAge());
-document.write('Speaking =>', p.languages); // static
+ // let p = new Person();
 
-document.write('weight   =>', Person.getWeight(), 'kg');
-document.write('height   =>', Person.getHeight(), 'cm');
-console.log('Name     =>', p.getName);
-console.log('Job      =>', p.getJob());
-console.log('Age      =>', p.getAge());
-console.log('Speaking =>', p.languages); // static
+var p1 = new Person(10, 20); // console.log(p.languages)
 
-console.log('weight   =>', Person.getWeight(), 'kg');
-console.log('height   =>', Person.getHeight(), 'cm');
+console.log(p1.distance); // // ----------------------------------
+// p.setName = 'Medhat Dawoud';
+// document.write('Name     =>', p.getName, '<br></br>');
+// document.write('Job      =>', p.getJob());
+// document.write('Age      =>', p.getAge());
+// document.write('Speaking =>', p.languages);
+// static
+// document.write('weight   =>', Person.getWeight(), 'kg');
+// document.write('height   =>', Person.getHeight(), 'cm');
+// console.log('Name     =>', p.getName);
+// console.log('Job      =>', p.getJob());
+// console.log('Age      =>', p.getAge());
+// console.log('Speaking =>', p.languages);
+// static
+// console.log('weight   =>', Person.getWeight(), 'kg');
+// console.log('height   =>', Person.getHeight(), 'cm');
 
 /***/ })
 /******/ ]);
