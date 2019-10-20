@@ -192,28 +192,36 @@ function (_Human) {
 }(Human);
 
 
+// CONCATENATED MODULE: ./src/Point.js
+function Point_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Point_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function Point_createClass(Constructor, protoProps, staticProps) { if (protoProps) Point_defineProperties(Constructor.prototype, protoProps); if (staticProps) Point_defineProperties(Constructor, staticProps); return Constructor; }
 
 var Point =
 /*#__PURE__*/
 function () {
   function Point(x, y) {
-    _classCallCheck(this, Point);
+    Point_classCallCheck(this, Point);
 
     this.x = x;
     this.y = y;
   }
 
-  _createClass(Point, null, [{
+  Point_createClass(Point, null, [{
     key: "distance",
     value: function distance(a, b) {
-      dx = a.x - b.x;
-      dy = a.y - b.y;
+      var dx = a.x - b.x;
+      var dy = a.y - b.y;
       return Math.hypot(dx, dy);
     }
   }]);
 
   return Point;
 }();
+
+
 // CONCATENATED MODULE: ./src/index.js
 // named exports
 // import {getUserName, address} from './modules';
@@ -222,13 +230,14 @@ function () {
 // import * as all from './modules';
 
 console.log("hello node", address, getUserName); // --------------------------------
-// import Person from './classes';
 
- // let p = new Person();
 
-var p1 = new Person(10, 20); // console.log(p.languages)
 
-console.log(p1.distance); // // ----------------------------------
+var p = new Person();
+var p1 = new Point(5, 3);
+var p2 = new Point(6, 7); // console.log(p.languages)
+
+console.log(Point.distance(p1, p2)); // // ----------------------------------
 // p.setName = 'Medhat Dawoud';
 // document.write('Name     =>', p.getName, '<br></br>');
 // document.write('Job      =>', p.getJob());
