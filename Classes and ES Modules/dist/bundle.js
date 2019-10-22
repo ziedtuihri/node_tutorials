@@ -207,9 +207,15 @@ function () {
 
     this.x = x;
     this.y = y;
-  }
+  } // show = () => '${this.x} and ${htis.y}';
+
 
   Point_createClass(Point, null, [{
+    key: "toString",
+    value: function toString() {
+      return '${this.x}, ${htis.y}', this.x;
+    }
+  }, {
     key: "distance",
     value: function distance(a, b) {
       var dx = a.x - b.x;
@@ -233,11 +239,9 @@ console.log("hello node", address, getUserName); // ----------------------------
 
 
 
-var p = new Person();
-var p1 = new Point(5, 3);
-var p2 = new Point(6, 7); // console.log(p.languages)
-
-console.log(Point.distance(p1, p2)); // // ----------------------------------
+var p1 = new Point(5, 6);
+console.log('affiche ', p1.toString()); // console.log(p.languages)
+// // ----------------------------------
 // p.setName = 'Medhat Dawoud';
 // document.write('Name     =>', p.getName, '<br></br>');
 // document.write('Job      =>', p.getJob());

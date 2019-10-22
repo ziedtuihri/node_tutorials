@@ -7,5 +7,5 @@ let Rectongle = class {
         return this.height * this.width;
     }
 }
-
-console.log(new Rectongle(4,5).area());
+let obj = new Rectongle(6,6);
+console.log(new Rectongle(4,5).area(), obj.area());
