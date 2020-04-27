@@ -55,8 +55,7 @@ const obj3 = {
 
 const obj4 = Object.create(obj1);
 
-assert.notEqual(1, 2);
+assert.notEqual(obj1, obj4);
 assert.notDeepEqual(obj1, obj4);
 assert.deepEqual(result, 21);
 assert.deepEqual(obj1, obj2);
-assert.deepStrictEqual(NaN, NaN);
